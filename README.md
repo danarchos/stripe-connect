@@ -1,4 +1,4 @@
-# Express starter template
+# Stripe Connect Template
 
 ## Setup
 
