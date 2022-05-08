@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import express from "express";
 import cors from "cors";
-import { router } from "./routes";
+import { accountRouter, checkoutRouter } from "./routes";
 
 const app = express();
 
@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-app.use("/", router);
+app.use("/account", accountRouter);
+app.use("/checkout", checkoutRouter);
 
 app.listen(PORT, () => {
-  console.log("LIGHTNING SERVICE RUNNING ON PORT", PORT);
+  console.log("STRIPE RUNNING ON PORT", PORT);
 });
